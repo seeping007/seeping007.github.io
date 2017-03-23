@@ -13,12 +13,14 @@ This is where the story starts......
 
 > Tip：大多网络文章都强调并标明，该代码库的名称必须与账户名相同。其实不然，可以随意取名（例如，笔者将其取名为 personal）。但是，如果名称是用户名时，后续生成网址正好为最简短的形式，即 https://username.github.io；如果采用其他名称，则会在网址后额外添加一个项目名，例如 https://username.github.io/personal。
 
-#### 将代码库拷贝到本地
+a. 将代码库拷贝到本地
+
 ```
 git clone github.com/user/repository.git
 ```
 
-#### 推送更新
+b. 推送更新
+
 ```
 git add index.html
 git commit -a -m "first pages commit"
@@ -26,7 +28,7 @@ git push
 ```
 > Tip：Github要求“User pages must be build from the master branch”，因此以上操作均在master分支上。其他种类的Github pages可能只有gh-pages分支的代码才会被自动生成网站链接。
 
-#### 加载网站
+c. 加载网站
 
 推送更新之后，很快Github就会帮你自动完成网站构建。链接如下：
 
@@ -72,7 +74,7 @@ bundle install
 
 各种风格任你选，去下载一个并解压将文件放到你的代码库（repository）根目录下。当然，适当的整理会略有帮助。
 
-#### 本地服务器预览
+本地服务器预览：
 
 ```
 $ bundle exec jekyll serve
