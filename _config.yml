@@ -1,6 +1,7 @@
 permalink: /:title
 
-title: Seeping's Blog
+title: Seeping Blog
+SEOTitle: 思平的博客 | Seeping Blog
+description: "Seeping's Blog"
+keyword: "陈思平, Seeping, 博客, Blog"
 url: http://www.iseeping.com
-feed: /atom.xml
-author_info: <a href="http://www.iseeping.com/">Chen Siping</a>

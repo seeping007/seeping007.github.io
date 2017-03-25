@@ -180,10 +180,13 @@ a.external:hover {
     position: fixed;
     top: 0;
     left: 0;
-    width: 25%;
+    width: 30%;
     height: 100%;
     max-width: 500px;
-    background: #59a0b0;
+    background-image: url("/images/lever.jpeg");
+    /*background: #1A1A1A;*/
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
 @media screen and (max-width: 767px) {
