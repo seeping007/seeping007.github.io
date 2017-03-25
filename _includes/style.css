@@ -180,13 +180,13 @@ a.external:hover {
     position: fixed;
     top: 0;
     left: 0;
-    width: 30%;
+    width: 25%;
     height: 100%;
     max-width: 500px;
-    background-image: url("/images/lever.jpeg");
-    /*background: #1A1A1A;*/
-    background-size: cover;
-    background-position: 50% 50%;
+    background: #1F1E28;
+    /*background-image: url("/images/lever.jpeg");*/
+    /*background-size: cover;*/
+    /*background-position: 50% 50%;*/
 }
 
 @media screen and (max-width: 767px) {
@@ -200,9 +200,11 @@ a.external:hover {
 
 .index-wrapper .info-card {
     position: absolute;
-    margin-top: 70%;
-    text-align: center;
     width: 100%;
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background: #17161D;
 }
 
 @media screen and (max-width: 767px) {
@@ -214,7 +216,6 @@ a.external:hover {
 .index-wrapper .info-card h1 {
     font-size: 30px;
     color: #fff;
-    margin-bottom: 20px;
     text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
     letter-spacing: 0.15em;
     text-shadow: rgba(255, 255, 255, 0.5) 0 0 15px, rgba(255, 255, 255, 0.5) 0 0 10px;
@@ -664,6 +665,18 @@ li.L9 {
     padding: 25px 0;
     text-align: center;
     font-size: 13px;
-    line-height: 34px;
+    line-height: 20px;
     color: #a6a6a6;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 0; 
+    width: 100%;
+    font-size: 13px;
+    text-align: center;
+    line-height: 20px;
+    color: #666;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
