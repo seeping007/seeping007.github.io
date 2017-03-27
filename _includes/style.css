@@ -395,7 +395,7 @@ a.external:hover {
 
 .post-wrapper pre {
     background: #f7f3f7;
-    padding: 20px 30px 15px;
+    padding: 10px 10px 10px 10px;
     overflow: auto;
     margin-bottom: 40px;
     font-size: 14px;
@@ -457,7 +457,7 @@ a.external:hover {
 }
 
 .post-wrapper blockquote {
-    margin-left: 25px;
+    /*margin-left: 25px;*/
     font-size: 14px;
     font-style: italic;
 }

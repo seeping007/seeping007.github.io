@@ -1,5 +1,5 @@
 $(function() {
-    $('pre').addClass('prettyprint linenums'); // 添加Google code Hight需要的class
+    $('pre').addClass('prettyprint'); // 添加Google code Hight需要的class
 
     window.disqus_shortname = 'seeping'; // required: replace example with your forum shortname
     $('#disqus_container .comment').on('click',function(){
