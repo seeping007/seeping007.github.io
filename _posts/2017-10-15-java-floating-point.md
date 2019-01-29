@@ -9,7 +9,7 @@ category: blog
 
 > Floating point numbers are a just approximation, they are imprecise.
 
-- Sample 1
+- Example 1
 
 ```java
 float myNumber = 3.146;
@@ -25,7 +25,7 @@ float zeroFloat = 0.0f;
 if (zeroFloat == 0) {}
 ```
 
-- Sample 2
+- Example 2
 
 ```java
 // This will cause an infinite loop!

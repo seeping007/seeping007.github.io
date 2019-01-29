@@ -9,7 +9,7 @@ category: blog
 
 > 编程是一门严谨、科学的学问，为自己写的每一行代码负责是程序员的基本素养。在开发过程中，我们经常会因为项目上线的压力，或者自己思维上的懒惰，不自觉地敲下一些性能底下、结构邋遢，甚至有bug隐患的代码。久而久之，一个又一个看似细小的“不注意”积少成多，终究会对程序的性能和维护带来不好的影响。因此，平时开发过程中，应该有意识地养成良好的编码习惯，凡事多想一想，有没有更高效、更优雅的写法。
 > 
-> 也许有人会说，为什么老是要去抠这些所谓的效率，区别有那么大么，应该更关心业务才对（无视代码规范也属于此类）。我个人认为，从不去思考如何写出高效、优雅代码的程序员，也不会真正理解业务的背后有多少资源和逻辑在支持，更不会倾其所能与他人一起探索更优质的解决方案，你相信这样能做好业务？反正我不信。程序非儿戏，且码且珍惜。
+> 也许有人会说，为什么老是要去抠这些所谓的效率，区别有那么大么，应该更关心业务才对（无视代码规范也属于此类）。我觉得，从不去思考如何写出高效、优雅代码的程序员，也不会真正理解业务的背后有多少资源和逻辑在支持，更不会倾其所能与他人一起探索更优质的解决方案，你相信这样能做好业务？反正我不信。"码如其人"，且码且珍惜。
 > 
 > 话不多说，下面就分享一些针对Java代码的性能优化建议。
 
@@ -49,7 +49,7 @@ for(int i = 0, int length = list.size(); i < length; i++) {...}
 ```java
 String str = "aaa";
 if(i == 1) {
-	list.add(str);
+    list.add(str);
 }
 ```
 
@@ -103,7 +103,7 @@ for (val = 0; val < 100000; val += 5) {
 
 ```java
 for (val = 0; val < 100000; val += 5) {
-	a = val << 3;
+    a = val << 3;
 	b = val >> 1;
 }
 ```
@@ -136,11 +136,9 @@ for (int i = 0; i <= count; i++) {
 #### 15. 尽量在合适的场合使用单例
 使用单例可以减轻加载的负担、缩短加载的时间、提高加载的效率，但并不是所有地方都适用于单例，简单来说，单例主要适用于以下三个方面：
 
-```
-（1）控制资源的使用，通过线程同步来控制资源的并发访问
-（2）控制实例的产生，以达到节约资源的目的
-（3）控制数据的共享，在不建立直接关联的条件下，让多个不相关的进程或线程之间实现通信
-```
+- 控制资源的使用，通过线程同步来控制资源的并发访问
+- 控制实例的产生，以达到节约资源的目的
+- 控制数据的共享，在不建立直接关联的条件下，让多个不相关的进程或线程之间实现通信
 
 #### 16. 尽量避免随意使用静态变量
 要知道，当某个对象被定义为static的变量所引用，那么GC通常是不会回收这个对象所占有的堆内存的。
@@ -192,20 +190,22 @@ public static void main(String[] args) {
 	for (int j = 0; j < loopTime; j++) {
 		String str = String.valueOf(i);
 	}
-	System.out.println("String.valueOf()：" +		(System.currentTimeMillis() - startTime) + "ms");
+	System.out.println("String.valueOf()：" 
+                       + (System.currentTimeMillis() - startTime) + "ms");
 	
 	startTime = System.currentTimeMillis(); 
 	for (int j = 0; j < loopTime; j++) {
 		String str = i.toString();
 	}
-	System.out.println("Integer.toString()：" + 		(System.currentTimeMillis() - startTime) + "ms");
+	System.out.println("Integer.toString()：" 
+                       + (System.currentTimeMillis() - startTime) + "ms");
 	
 	startTime = System.currentTimeMillis(); 
 	for (int j = 0; j < loopTime; j++) {
 		String str = i + "";
 	}
-	System.out.println("i + \"\"：" + 
-		(System.currentTimeMillis() - startTime) + "ms");
+	System.out.println("i + \"\"：" 
+                       + (System.currentTimeMillis() - startTime) + "ms");
 }
 ```
 运行结果为：
@@ -226,7 +226,7 @@ i + ""：39ms
 
 ```java
 public static void main(String[] args) {
-	HashMap<String, String> hm = new HashMap<String, String>();
+	Map<String, String> hm = new HashMap<String, String>();
 	hm.put("111", "222");
 	Set<Map.Entry<String, String>> entrySet = hm.entrySet();
 	Iterator<Map.Entry<String, String>> iter = entrySet.iterator(); 
