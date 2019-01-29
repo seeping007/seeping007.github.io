@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JVM手记|为何要了解GC
+title: JVM手记 | 为何要了解GC
 category: blog
 description: 为什么需要GC？为什么你需要理解GC？
 ---
