@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tool | iTerm
-description: Mac iTerm guide, includes: shortcut, profile
+description: Mac iTerm terminal guide, including shortcut, profile.
 category: blog
 ---
 
