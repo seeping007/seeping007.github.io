@@ -79,8 +79,8 @@ try {
 
 ## 相关资料
 
-- [《Effective Java, 3nd Edition》][1]
-- [极客时间 | Java核心技术36讲][2]
+* [《Effective Java, 3nd Edition》][1]
+* [极客时间 | Java核心技术36讲][2]
 
 [1]: https://www.amazon.cn/dp/0134685997/ref=sr_1_5?ie=UTF8&qid=1548813422&sr=8-5&keywords=effective+java
 [2]: https://time.geekbang.org/column/intro/82

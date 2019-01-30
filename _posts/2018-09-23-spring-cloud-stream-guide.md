@@ -11,8 +11,8 @@ category: blog
 
 ```xml
 <dependency>
-	<groupId>org.springframework.cloud</groupId>
-	<artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
     <version>1.3.0.RELEASE</version>
 </dependency>
 ```
