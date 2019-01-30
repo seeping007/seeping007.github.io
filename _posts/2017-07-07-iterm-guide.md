@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tool | iTerm
+title: iTerm使用指南
 description: Mac iTerm terminal guide, including shortcut, profile.
 category: blog
 ---

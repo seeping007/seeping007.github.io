@@ -207,6 +207,18 @@ a.external:hover {
     background: #17161D;
 }
 
+.info-personal {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 24px;
+    font-size: 10px;
+    color: #fff;
+    text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.15em;
+}
+
 @media screen and (max-width: 767px) {
     .index-wrapper .info-card {
         margin-top: 70px;
@@ -345,6 +357,7 @@ a.external:hover {
 .post-wrapper h2 {
     font-size: 22px;
     font-weight: bold;
+    margin-top: 25px;
     margin-bottom: 25px;
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
@@ -359,7 +372,7 @@ a.external:hover {
 .post-wrapper h3 {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     color: #222;
 }
 
@@ -374,7 +387,7 @@ a.external:hover {
 .post-wrapper h6 {
     color: #333;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .post-wrapper p {
@@ -397,11 +410,11 @@ a.external:hover {
     background: #f7f7f7;
     padding: 10px 10px 10px 10px;
     overflow: auto;
+    margin-top: -15px;
     margin-bottom: 15px;
     font-size: 14px;
     border: 1px solid #eee;
     color: #b9bdb6;
-    margin-top: -20px;
 }
 
 .post-wrapper pre code {
@@ -424,6 +437,7 @@ a.external:hover {
 }
 
 .post-wrapper ul {
+    margin-top: -10px;
     margin-bottom: 25px;
     margin-left: 25px;
 }
@@ -436,6 +450,7 @@ a.external:hover {
 
 .post-wrapper p + ul {
     margin-top: -20px;
+    margin-bottom: 10px;
 }
 
 .post-wrapper ol {

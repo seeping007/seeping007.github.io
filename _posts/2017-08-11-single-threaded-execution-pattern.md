@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 多线程设计模式 | Single Threaded Execution
-description: Single Threaded Execution模式：设置限制以确保同一时间内只能让一个线程执行处理
+description: 单线程执行模式：设置限制以确保同一时间内只能让一个线程执行处理。
 category: blog
 ---
 
@@ -32,9 +32,9 @@ category: blog
 
 满足下列条件时，死锁就会发生：
 
-1. 存在多个SharedResource角色
-2. 线程在持有者某个SharedResource角色的锁的同时，还想获取其他SharedResource角色的锁
-3. 获取SharedResource角色的锁的顺序并不固定
+- 存在多个SharedResource角色
+- 线程在持有者某个SharedResource角色的锁的同时，还想获取其他SharedResource角色的锁
+- 获取SharedResource角色的锁的顺序并不固定
 
 只要破坏三个条件中的一个，就可以防止死锁发生。
 
@@ -53,16 +53,12 @@ category: blog
 
 ### synchronized语法
 
-```java
+```
 // synchronized方法
-synchronized void method() {
-    ...
-}
+synchronized void method() {}
 
 // synchronized代码块
-synchronized (obj) {
-    ...
-}
+synchronized (obj) {}
 
 // synchronized方法和代码块无论是执行return还是抛出异常，都一定能够释放锁。
 
@@ -87,16 +83,14 @@ synchronized就像是门上的锁。当看到门上了锁时，还应该确认�
 - long和double的赋值和引用是非原子操作。在线程间共享时，需要将其放入synchronized中操作，或者声明为volatile。
 
 ### 使用哪个锁保护
-
 - synchronized方法：获取的是this的锁。
 - synchronized代码块：需要明确指定获取哪个实例的锁。
-
 - 实例不同，锁也就不一样。
 
 
 
 ## 参考资料
 
-[《图解Java多线程设计模式》][1]
+- [《图解Java多线程设计模式》][1]
 
 [1]: https://www.amazon.cn/dp/B074WVZK8B/ref=sr_1_1?s=books&ie=UTF8&qid=1548786260&sr=1-1&keywords=%E5%9B%BE%E8%A7%A3java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F
