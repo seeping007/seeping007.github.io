@@ -37,19 +37,30 @@ https://<username>.github.io/<repository>
 
 ### 2. Jekyll 安装
 
-1.检查 Ruby 版本号（必须高于ver-2.0.0，如果没有得先安装）
+1. 检查 Ruby 版本号（必须高于ver-2.0.0，如果没有得先安装）
 
 ```
-ruby --version
+ruby -v
+
+# following: install ruby on mac
+brew install rbenv ruby-build
+
+# Add rbenv to bash so that it loads every time you open a terminal
+echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+source ~/.bash_profile
+
+rbenv install 2.5.3
+rbenv global 2.5.3
+ruby -v
 ```
 
-2.安装 Bundler（管理 Gem 相依性的工具，例如jekyll）
+2. 安装 Bundler（管理 Gem 相依性的工具，例如jekyll）
 
 ```
 gem install bundler
 ```
 
-3.安装 Jekyll
+3. 安装 Jekyll
 
 首先需要在 repository 的根目录下生成 Gemfile 文件，内容为：
 

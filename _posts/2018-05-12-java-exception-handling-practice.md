@@ -29,8 +29,6 @@ category: blog
 
 >仅在异常场景中使用异常，勿将异常用于程序流程控制。
 
-- 反例
-
 ```java
 // Horrible abuse of exceptions. Don't ever do this!
 try {
@@ -42,11 +40,9 @@ try {
 }
 ```
 
-（1）混淆代码用意
-
-（2）降低代码执行效率：现代JVM的实现中，基于异常的语句执行效率低于控制语句（if/else、switch）
-
-（3）容易掩盖实际的程序错误，增加调试难度
+- 混淆代码用意
+- 降低代码执行效率：现代JVM的实现中，基于异常的语句执行效率低于控制语句（if/else、switch）
+- 容易掩盖实际的程序错误，增加调试难度
 
 #### 2. 仅捕获有必要的代码段，尽量不要一个大的try包住整段的代码。
 
@@ -80,7 +76,7 @@ try {
 ## 相关资料
 
 * [《Effective Java, 3nd Edition》][1]
-* [极客时间 | Java核心技术36讲][2]
+* [极客时间：Java核心技术36讲][2]
 
 [1]: https://www.amazon.cn/dp/0134685997/ref=sr_1_5?ie=UTF8&qid=1548813422&sr=8-5&keywords=effective+java
 [2]: https://time.geekbang.org/column/intro/82
