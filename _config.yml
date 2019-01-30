@@ -5,3 +5,8 @@ SEOTitle: 思平的博客 | Seeping Blog
 description: "Seeping's Blog"
 keyword: "陈思平, Seeping, 博客, Blog"
 url: http://www.iseeping.com
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge

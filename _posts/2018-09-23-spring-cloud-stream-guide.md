@@ -80,10 +80,9 @@ public class MqHelper {
     public void notifyLogParsed(String id, LogType type) {
 
         // assemble message contents
-        HashMap<String, Object> payloadMap = new HashMap<String, Object>() {{
-            put("id", id);
-            put("type", type);
-        }};
+        Map<String, Object> payloadMap = new HashMap<>();
+        payloadMap.put("id", id);
+        payloadMap.put("type", type);
 
         String json;
         try {
