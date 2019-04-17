@@ -103,7 +103,7 @@ category: blog
 
 
 
-##参考资料
+## 参考资料
 
 - [Java Garbage Collection Basic][1]
 - [Java SE HotSpot at a Glance][2]

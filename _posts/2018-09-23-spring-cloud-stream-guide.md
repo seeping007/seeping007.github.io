@@ -5,6 +5,17 @@ description: 以RabbitMQ为例，介绍Spring Cloud Stream的基本用法。
 category: blog
 ---
 
+## 基本概念
+
+- Spring Cloud Stream本质上就是整合了Spring Boot和Spring Integration，实现了一套轻量级的消息驱动的微服务框架。目前只支持RabbitMQ、Kafka的自动化配置。
+- Spring Cloud Stream构建的应用程序与消息中间件之间是通过绑定器`Binder`相关联的，绑定器对于应用程序而言起到了隔离作用，应用程序不需要知晓消息中间件的通信细节，只需要知道Binder给应用程序提供的概念（Channel）去实现即可。
+
+### Binder
+
+- 通过定义绑定器作为中间层，完美地实现了应用程序与消息中间件细节之间的隔离。通过向应用程序暴露统一的 `Channel`通道，使得应用程序不需要再考虑各种不同的消息中间件实现。当我们需要升级消息中间件，或是更换其他消息中间件产品时，我们要做的就是更换它们对应的 `Binder`绑定器而不需要修改任何Spring Boot的应用逻辑。
+
+
+
 ## 使用案例：基于RabbitMQ
 
 ### 1. Maven Dependency
@@ -16,6 +27,8 @@ category: blog
     <version>1.3.0.RELEASE</version>
 </dependency>
 ```
+
+- 该依赖包是Spring Cloud Stream对RabbitMQ支持的封装，其中包含了对RabbitMQ的自动化配置等内容。
 
 ### 2. MQ Configuration
 
@@ -45,6 +58,7 @@ public interface MqChannel {
     String LOG_PARSED_OUTPUT = "log_parsed_output";
     String LOG_RENDERED_INPUT = "log_rendered_input";
 
+    // bind a output channel named "log_parsed_output"
     @Output(LOG_PARSED_OUTPUT)
     MessageChannel output();
 
@@ -80,7 +94,7 @@ public class MqHelper {
     public void notifyLogParsed(String id, LogType type) {
 
         // assemble message contents
-        Map<String, Object> payloadMap = new HashMap<>();
+        Map<String, Object> payloadMap = new HashMap<>(3);
         payloadMap.put("id", id);
         payloadMap.put("type", type);
 
@@ -114,3 +128,6 @@ public class MqHelper {
 }
 ```
 
+- `@EnableBinding`：该注解用来指定一个或多个定义了`@Input`或 `@Output`注解的接口，以此实现对消息通道（Channel）的绑定。
+
+- `@StreamListener`：该注解主要定义在方法上，作用是将被修饰的方法注册为消息中间件上数据流的事件监听器，注解中的属性值对应了监听的消息Channel名称。
